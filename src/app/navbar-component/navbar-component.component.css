@@ -1,0 +1,49 @@
+/* Aggiungi questo CSS nel tuo file di stile (ad esempio, styles.css o styles.scss) */
+
+/* Stile per il navbar principale */
+.navbar {
+    background-color: #ffffff; /* Colore di sfondo del navbar */
+    border-bottom: 1px solid #e5e5e5; /* Linea di separazione sotto il navbar */
+    padding: 15px 0; /* Spaziatura interna del navbar */
+  }
+  
+  /* Stile per il link Home */
+  .navbar-brand {
+    font-size: 24px; /* Dimensione del testo per il link Home */
+    font-weight: bold; /* Grassetto per il link Home */
+    color: #333; /* Colore del testo per il link Home */
+    text-decoration: none; /* Rimuovi la sottolineatura dal link Home */
+  }
+  
+  /* Stile per il pulsante del menu a comparsa (hamburger) */
+  .navbar-toggler-icon {
+    background-color: #333; /* Colore dell'icona hamburger */
+  }
+  
+  /* Stile per il menu a comparsa quando è espanso */
+  .navbar-collapse {
+    justify-content: flex-end; /* Allinea gli elementi del menu a destra */
+  }
+  
+  /* Stile per i link del menu */
+  .navbar-nav {
+    margin-right: 15px; /* Spaziatura a destra per il menu */
+  }
+  
+  .nav-item {
+    margin-left: 15px; /* Spaziatura tra gli elementi del menu */
+  }
+  
+  .nav-link {
+    font-size: 18px; /* Dimensione del testo per i link del menu */
+    color: #333; /* Colore del testo per i link del menu */
+    text-decoration: none; /* Rimuovi la sottolineatura dai link del menu */
+    transition: color 0.3s ease-in-out; /* Animazione per il cambio di colore al passaggio del mouse */
+  }
+  
+  /* Stile per il link attivo */
+  .nav-link.active,
+  .nav-link:hover {
+    color: #007bff; /* Colore del testo quando il link è attivo o al passaggio del mouse */
+  }
+  
