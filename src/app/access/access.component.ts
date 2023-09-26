@@ -11,10 +11,10 @@ import { HttpClient } from '@angular/common/http';
 export class AccessComponent implements OnInit {
   username: string = '';
   password: string = '';
-  loginRiuscito : boolean = false;
+  loginRiuscito: boolean = false;
   dati: any;
 
-  constructor(private service: AutenticazioneService, private router: Router, private http: HttpClient) { }
+  constructor(private service: AutenticazioneService, private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.service.getDati().subscribe(
@@ -31,8 +31,6 @@ export class AccessComponent implements OnInit {
   onSubmit(): void {
     console.log("Valori:", this.username, this.password);
 
-  
-
     this.dati.forEach((element: any) => {
       if (element.user === this.username && element.password === this.password) {
         this.loginRiuscito = true;
@@ -41,13 +39,15 @@ export class AccessComponent implements OnInit {
 
     if (this.loginRiuscito) {
       console.log("Login riuscito!");
+      // Imposta la variabile enabled a true e salvala in localStorage quando fai il login
       this.service.enabled = true;
+      localStorage.setItem('enabled', 'true');
+
+      // Reindirizza l'utente alla pagina "about"
       this.router.navigate(['/about']);
     } else {
       console.log("Login fallito. Credenziali non valide.");
       console.log("No good identifier");
     }
   }
-
-  
 }
